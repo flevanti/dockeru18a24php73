@@ -1,0 +1,15 @@
+parse_git_branch() {
+ git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/(\1)/'
+}
+
+PS1='[DOCKER] \[\033[36m\]\u\[\033[m\]@ \[\033[33;1m\]\W\[\033[m\] \[\e[95m\]$(parse_git_branch)\[\e[0m\] \$ '
+export PATH="$HOME/.composer/vendor/bin:$PATH"
+export CLICOLOR=1
+export LSCOLORS=ExFxBxDxCxegedabagacad
+alias ls='ls -GFh'
+
+# Set the bash history file path to the same as mapped in web's volumes definition.
+export HISTFILE=~/bash/.bash_history
+
+# Set the datetime format for the bash history file
+export HISTTIMEFORMAT="%d/%m/%y %T "
