@@ -1,0 +1,6 @@
+# BASE WEBSERVER
+
+Ubuntu 18.04
+Apache 2.4
+PHP 7.3
+
