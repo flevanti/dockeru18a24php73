@@ -88,10 +88,14 @@ RUN a2enmod headers
 # COPY PHP INI FILES IN MODS AVAILABLE FOLDER AND THEN ENABLE THEM
 COPY files/xdebug.ini /etc/php/${PHP_VERSION}/mods-available/xdebug.ini
 COPY files/imagick.ini /etc/php/${PHP_VERSION}/mods-available/imagick.ini
+COPY files/imagick.ini /etc/php/${PHP_VERSION}/mods-available/memcached.ini
+
 RUN  ln -sf /etc/php/${PHP_VERSION}/mods-available/xdebug.ini /etc/php/${PHP_VERSION}/cli/conf.d/
 RUN  ln -sf /etc/php/${PHP_VERSION}/mods-available/xdebug.ini /etc/php/${PHP_VERSION}/apache2/conf.d/
 RUN  ln -sf /etc/php/${PHP_VERSION}/mods-available/imagick.ini /etc/php/${PHP_VERSION}/cli/conf.d/
 RUN  ln -sf /etc/php/${PHP_VERSION}/mods-available/imagick.ini /etc/php/${PHP_VERSION}/apache2/conf.d/
+RUN  ln -sf /etc/php/${PHP_VERSION}/mods-available/memcached.ini /etc/php/${PHP_VERSION}/cli/conf.d/
+RUN  ln -sf /etc/php/${PHP_VERSION}/mods-available/memcached.ini /etc/php/${PHP_VERSION}/apache2/conf.d/
 
 
 # HOW COULD I FORGOT? THE BEST EDITOR IN THE WORLD!
