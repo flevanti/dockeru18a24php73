@@ -132,6 +132,13 @@ RUN if [ $INSTALL_PHPDOX = true ]; then \
 fi
 
 
+# Install ping and stop
+RUN apt-get install -q -y iputils-ping htop
+
+
+# clean
+RUN apt autoremove -q -y
+
 EXPOSE 80 443
 WORKDIR /var/www/
 
