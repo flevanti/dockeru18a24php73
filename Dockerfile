@@ -49,6 +49,7 @@ RUN apt-get install -q -y   git  \
   php${PHP_VERSION}-bcmath \
   php${PHP_VERSION}-bz2 \
   php${PHP_VERSION}-zip \
+  php${PHP_VERSION}-soap \
   ssmtp \
   php-mail \
   screen
