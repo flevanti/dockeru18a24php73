@@ -59,7 +59,7 @@ RUN apt-get install -q -y libmagickwand-dev --no-install-recommends
 RUN pecl install imagick
 
 # INSTALL XDEBUG
-RUN pecl install xdebug-2.9.8
+RUN pecl install xdebug
 RUN curl -sS https://getcomposer.org/installer -o composer-setup.php
 RUN php composer-setup.php --install-dir=/usr/local/bin --filename=composer
 
