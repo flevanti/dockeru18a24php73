@@ -24,7 +24,7 @@ RUN apt-get update -q -y
 
 
 
-RUN apt-get install -y apache2
+RUN apt-get install -y apache2 fop
 RUN apt-get install -y php${PHP_VERSION}
 RUN apt-get install -q -y   git  \
   unzip \
