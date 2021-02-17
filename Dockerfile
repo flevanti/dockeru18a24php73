@@ -24,7 +24,7 @@ RUN apt-get update -q -y
 
 
 
-RUN apt-get install -y apache2
+RUN apt-get install -y apache2 fop
 RUN apt-get install -y php${PHP_VERSION}
 RUN apt-get install -q -y   git  \
   unzip \
@@ -50,6 +50,7 @@ RUN apt-get install -q -y   git  \
   php${PHP_VERSION}-bz2 \
   php${PHP_VERSION}-zip \
   php${PHP_VERSION}-soap \
+  php${PHP_VERSION}-pgsql \
   ssmtp \
   php-mail \
   screen
