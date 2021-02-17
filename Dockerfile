@@ -138,8 +138,8 @@ RUN apt-get install -q -y iputils-ping htop
 
 # Install NVM / Node / gulp
 RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | bash
-RUN nvm install 8.15.1
-RUN npm install -g gulp-cli
+ENV NVM_DIR="/root/.nvm"
+RUN /bin/bash -c "source /root/.nvm/nvm.sh && nvm install 8.15.1 && npm install -g gulp-cli"
 
 # clean
 RUN apt autoremove -q -y

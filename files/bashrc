@@ -13,3 +13,10 @@ export HISTFILE=~/bash/.bash_history
 
 # Set the datetime format for the bash history file
 export HISTTIMEFORMAT="%d/%m/%y %T "
+
+#THIS IS NEEDED FOR XDEBUG OTHERWISE SCRIPTS DEBUGGING WON'T WORK
+export XDEBUG_CONFIG=''
+
+#LOAD NVM ENV CONFIGURATION
+source ~/.nvm/nvm.sh
+
