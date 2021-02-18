@@ -142,6 +142,8 @@ RUN curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.37.2/install.sh | b
 ENV NVM_DIR="/root/.nvm"
 RUN /bin/bash -c "source /root/.nvm/nvm.sh && nvm install 8.15.1 && npm install -g gulp-cli"
 
+RUN apt-get install -y net-tools 
+
 # clean
 RUN apt autoremove -q -y
 
