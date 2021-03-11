@@ -58,6 +58,7 @@ RUN apt-get install -q -y   git  \
 # INSTALL IMAGICK PACKAGE AND EXTENSION
 RUN apt-get install -q -y libmagickwand-dev --no-install-recommends
 RUN pecl install imagick
+RUN apt-get install -q -y ghostscript
 
 # INSTALL XDEBUG
 RUN pecl install xdebug
