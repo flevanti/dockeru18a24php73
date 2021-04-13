@@ -10,8 +10,9 @@ ENV INSTALL_PHPDOX=${INSTALL_PHPDOX}
 ENV DEBIAN_FRONTEND=noninteractive
 ENV TZ=UTC
 
-# REFRESH PACKAGES LIST
+# REFRESH PACKAGES LIST AND UPGRADE CURRENT PACKAGES USED...
 RUN apt-get update -q -y
+RUN apt-get upgrade -q -y
 
 # ADD ADDITIONAL PACKAGE REPOSITORY FOR APACHE2 AND PHP (@see https://launchpad.net/~ondrej )
 RUN apt-get install -q -y software-properties-common
